@@ -3,18 +3,19 @@
 from arithmetic import (add, subtract, multiply, divide, square, cube,
                         power, mod, )
 
-
+#Start loop to receive calculation request
 while True:
     input_string = input("Calculate > ")
     tokens = input_string.split(' ')
     operator = tokens[0]
     
+    #Allow user to quit calculator app
     if 'q' in tokens:
         print("You will exit")
         break
     else:
         if len(tokens) < 2:
-            print("I need at least 1 number")
+            print("I need at least 1 operator and 1 number")
             continue
         elif len(tokens) == 2:
             num1 = float(tokens[1])
